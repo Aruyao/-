@@ -1,0 +1,75 @@
+import java.util.Scanner;
+
+class dannie{
+    
+    private String name;
+    private String surname;
+    private String doljnost;
+
+    public dannie(){}
+    
+    public dannie(String name, String surname, String doljnost) {
+        this.name = name;
+        this.surname = surname;
+        this.doljnost = doljnost;
+    }
+
+    public String getname() {
+        return name;
+    }
+ 
+        public void setname(String name) {
+            this.name = name;
+        }
+    
+    public String getsurname() {
+        return getsurname;
+    }
+    
+        public void setsurname(String surname) {
+            this.surname = surname;
+        }
+    
+    public String getdoljnost() {
+        return getdoljnost;
+    }
+    
+        public void setdoljnost(String doljnost) {
+            this.doljnost = doljnost;
+        }
+}
+
+
+class Main {
+    public static void main(String[] args) {
+
+    Scanner sc = new Scanner(System.in);
+
+    int i;
+    
+    dannie nsd = new dannie();
+
+    int number = sc.nextInt();
+
+    
+        switch (number) {
+            case 1:
+                System.out.println("1"); 
+            break;
+            case 2:
+                System.out.println("2");
+            break;
+            case 3:
+                System.out.println("Введите имя: \n");
+                nsd.setname(sc.nextLine());
+                System.out.println("Введите фамилию: \n");
+                nsd.setsurname(sc.nextLine());
+                System.out.println("Введите Должность: \n");
+                nsd.setdoljnost(sc.nextLine());
+                System.out.println("Имя: " + nsd.getname() + "Имя: " + nsd.getsurname() + "Должность: " + nsd.getdoljnost());
+            break;
+        }
+  
+
+    }
+}
