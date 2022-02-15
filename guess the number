@@ -10,7 +10,7 @@ class Random{
     }
     
     public void setRa() {
-        this.ra = (int) (Math.random() * 100) + 1;
+        this.ra = ra;
     }
     
     public int getRa() {
@@ -31,15 +31,15 @@ public class Main
 	    
 	    double chislo = 0;
 	    
-	    int popitka = 0;
+	    int popitka = 1;
 
 		
 		while (true) {
 		    chislo = in.nextDouble();
-            if (chislo > myRandom.getRa){
+            if (chislo < myRandom.getRa()){
                 System.out.println("Больше");
                 popitka++;
-	        } else if (chislo < myRandom.getRa){
+	        } else if (chislo > myRandom.getRa()){
                 System.out.println("Меньше");
                 popitka++;
 		    } else { 
