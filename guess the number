@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+class Random{
+    
+    private  int ra;
+    
+    
+    public Random() {
+        this.ra = (int) (Math.random() * 100) + 1;
+    }
+    
+    public void setRa() {
+        this.ra = (int) (Math.random() * 100) + 1;
+    }
+    
+    public int getRa() {
+        return ra;
+    } 
+    
+}
+
+public class Main 
+{
+	public static void main(String[] args) {
+	    
+	    Random myRandom = new Random();
+	    
+	    Scanner in = new Scanner(System.in);
+	    
+	    System.out.println("Введите число: \n");
+	    
+	    double chislo = 0;
+	    
+	    int popitka = 0;
+
+		
+		while (true) {
+		    chislo = in.nextDouble();
+            if (chislo > myRandom.getRa){
+                System.out.println("Больше");
+                popitka++;
+	        } else if (chislo < myRandom.getRa){
+                System.out.println("Меньше");
+                popitka++;
+		    } else { 
+		        System.out.println("Вы угадали число");
+		        System.out.println("Попыток" + popitka);
+		        break;
+		    }
+		}
+	}
+}
