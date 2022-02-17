@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args){
+        System.out.println(Stepen(VivodReshenie()));
+        System.out.println(SamoReshenieDva());
+
+
+    }
+
+    public static int VivodReshenie() {
+        int a;
+        int n;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите ребро куба в см");
+        a = in.nextInt();
+        System.out.println("Введите число");
+        n = in.nextInt();
+
+        return a;
+        return n;
+    }
+    
+    public static int Stepen(int a) {
+        return (int) Math.pow(a, 3);
+
+    }
+    
+    public static int SamoReshenieDva(int n) {
+        int var = 2;
+        if (n > 1) {
+            if (n % var != 0) {
+                var++;
+                SamoReshenieDva(n);
+            } else if (n % var == 0) {
+                System.out.println(n + "Простое число");
+            }
+        }
+    }
+}
